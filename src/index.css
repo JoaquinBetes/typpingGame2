@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes animate {
+  0% {
+    width: 100%;
+    background-color: rgb(53, 204, 53);
+  }
+  50% {
+    width: 50%;
+    background-color: rgb(218, 230, 51);
+  }
+  100% {
+    width: 0;
+    background-color: rgb(230, 34, 34);
+  }
+}
+.progress-bar {
+  background-color: rgb(53, 204, 53);
+}
+.progress-bar.active {
+  animation: 15s animate linear;
+}
+.progress-bar.paused {
+    animation-play-state: paused;
+}
+.correct {
+  /* background-color: rgb(53, 204, 53); */
+  text-shadow: 0 0 4px rgb(6, 247, 6);
+}
+.wrong {
+  text-shadow: 0 0 4px red;
+}
+.game-text {
+  font-size: 3rem;
+  line-height: 1.44;
+  text-shadow: 0 0 3px #6D28D9AA;
+}
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
